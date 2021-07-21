@@ -1,5 +1,6 @@
 import "./style.css";
-import "./gopal.jpg";
+import Gopal from "./gopal.jpg";
+import Moon from "./moon.jpeg";
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -62,7 +63,7 @@ const spaceTextureLoader = new THREE.TextureLoader().load("space.JPG");
 scene.background = spaceTextureLoader;
 
 // Avatar
-const gopalTexture = new THREE.TextureLoader().load("gopal.JPG");
+const gopalTexture = new THREE.TextureLoader().load(Gopal);
 const gopal = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: gopalTexture })
@@ -72,7 +73,7 @@ scene.add(gopal);
 
 // moon
 
-const moonTexture = new THREE.TextureLoader().load("moon.JPG");
+const moonTexture = new THREE.TextureLoader().load(Moon);
 const normalTexture = new THREE.TextureLoader().load("normal.JPG");
 
 const moon = new THREE.Mesh(
