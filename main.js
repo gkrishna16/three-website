@@ -23,8 +23,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 
 renderer.render(scene, camera);
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: "#09203f" });
+const geometry = new THREE.TorusGeometry(10, 3, 16, 80);
+const material = new THREE.MeshStandardMaterial({ color: "red" });
 
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
@@ -41,7 +41,7 @@ scene.add(pointLight, ambientLight);
 // const gridHelper = new THREE.GridHelper(200, 50);
 // scene.add(lightHelper, gridHelper);
 
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
 // add stars
 function addStar() {
@@ -67,7 +67,7 @@ scene.background = spaceTextureLoader;
 // Avatar
 const gopalTexture = new THREE.TextureLoader().load(Gopal);
 const gopal = new THREE.Mesh(
-  new THREE.BoxGeometry(5, 5, 5),
+  new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: gopalTexture })
 );
 
@@ -79,7 +79,7 @@ const moonTexture = new THREE.TextureLoader().load(Moon);
 const normalTexture = new THREE.TextureLoader().load(Normal);
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(6, 80, 80),
+  new THREE.SphereGeometry(6, 50, 50),
   new THREE.MeshBasicMaterial({ map: moonTexture, normalMap: normalTexture })
 );
 moon.position.z = -10;
@@ -92,8 +92,8 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  gopal.rotation.x += 0.2;
-  gopal.rotation.y += 0.02;
+  gopal.rotation.x += 0.1;
+  gopal.rotation.y += 0.01;
   // gopal.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
