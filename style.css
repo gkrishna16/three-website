@@ -27,8 +27,10 @@ main {
   width: vw;
   color: white;
   z-index: 99;
+  height: 100%;
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
 
@@ -59,6 +61,15 @@ header {
   margin-bottom: var(--spacing);
   border: 10px solid;
   border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+header:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(92, 160, 223);
+  background-color: snow;
+
+  color: black;
 }
 
 section {
