@@ -14,6 +14,11 @@ canvas {
   left: 0;
 }
 
+a {
+  color: snow;
+  text-decoration: none; /* no underline */
+}
+
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
@@ -42,8 +47,11 @@ h1,
 h2,
 h3,
 blockquote {
-  font-family: elevon, sans-serif;
+  /* font-family: elevon, sans-serif;
   font-weight: 700;
+  font-style: normal; */
+  font-family: tomarik-display-shadow, sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -89,8 +97,8 @@ blockquote {
 }
 
 blockquote p {
-  color: black;
-  background-color: white;
+  color: snow;
+  background-color: black;
   font-size: 4rem;
   display: inline;
   line-height: 1;
@@ -100,8 +108,29 @@ blockquote p {
   grid-column: 6 / 12;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1020px) {
   h1 {
-    font-size: 60%;
+    font-size: 90%;
+  }
+
+  .projects-layout {
+    display: flex;
+  }
+  .projects-layout div {
+    margin: 1rem;
+    padding: 0.5em;
+    border: white 2px solid;
+    max-height: 3em;
+  }
+
+  .projects-layout div:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .purpose p {
+    font-size: 2rem;
+    color: snow;
   }
 }
