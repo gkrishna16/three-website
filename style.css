@@ -111,11 +111,10 @@ blockquote p {
 .projects-layout {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .projects-layout div {
-  margin: 1rem;
   padding: 0.5em;
   border: white 2px solid;
   min-height: 2em;
@@ -135,6 +134,9 @@ blockquote p {
   color: snow;
 }
 
+.social {
+  grid-column: 2/11;
+}
 /* media queries ................. */
 
 @media only screen and (max-width: 1020px) {
