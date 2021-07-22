@@ -108,29 +108,43 @@ blockquote p {
   grid-column: 6 / 12;
 }
 
+.projects-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-layout div {
+  margin: 1rem;
+  padding: 0.5em;
+  border: white 2px solid;
+  min-height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-layout div:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.purpose p {
+  font-size: 2rem;
+  color: snow;
+}
+
+/* media queries ................. */
+
 @media only screen and (max-width: 1020px) {
   h1 {
     font-size: 90%;
   }
+}
 
-  .projects-layout {
-    display: flex;
-  }
-  .projects-layout div {
-    margin: 1rem;
-    padding: 0.5em;
-    border: white 2px solid;
-    max-height: 3em;
-  }
-
-  .projects-layout div:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    transition: all 0.2s ease-in-out;
-  }
-
-  .purpose p {
-    font-size: 2rem;
-    color: snow;
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 75%;
   }
 }
