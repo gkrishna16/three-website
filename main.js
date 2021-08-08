@@ -11,7 +11,12 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 window.addEventListener("resize", function () {
   "use strict";
-  window.location.reload();
+  if (window.matchMedia("(min-width: 500px)").matches) {
+    console.log("Screen width is at least 500px");
+    window.location.reload();
+  } else {
+    console.log("Screen less than 500px");
+  }
 });
 
 const scene = new THREE.Scene();
