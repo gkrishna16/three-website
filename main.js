@@ -7,6 +7,13 @@ import Normal from "./normal.jpeg";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+// Refresh window after size change,
+
+window.addEventListener("resize", function () {
+  "use strict";
+  window.location.reload();
+});
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   100,
@@ -61,6 +68,7 @@ Array(200).fill().forEach(addStar);
 
 //space Texture
 const spaceTextureLoader = new THREE.TextureLoader().load(Space);
+// spaceTextureLoader.innerWidth(10);
 
 scene.background = spaceTextureLoader;
 
@@ -112,6 +120,16 @@ function animate() {
 
   renderer.render(scene, camera);
 }
+
+// function onWindowResize() {
+//   camera.aspect = contenedor.clientWidth / contenedor.clientHeight;
+
+//   camera.updateProjectionMatrix();
+
+//   renderer.setSize(contenedor.clientWidth, contenedor.clientHeight);
+// }
+
+// onWindowResize();
 
 animate();
 
