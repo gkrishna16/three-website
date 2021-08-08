@@ -8,6 +8,10 @@
 } */
 @import url("https://use.typekit.net/jmk3xov.css");
 
+body {
+  min-width: 100vw;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -29,7 +33,7 @@ a {
 }
 
 main {
-  width: vw;
+  min-width: 100vw;
   color: white;
   z-index: 99;
   height: 100%;
@@ -116,6 +120,7 @@ blockquote p {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 1em;
 }
 
 .projects-layout div {
