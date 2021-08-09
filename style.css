@@ -161,4 +161,8 @@ blockquote p {
   p {
     font-size: 80%;
   }
+  .purpose p {
+    font-size: 1rem;
+    color: snow;
+  }
 }
