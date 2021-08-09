@@ -11,7 +11,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 window.addEventListener("resize", function () {
   "use strict";
-  if (window.matchMedia("(min-width: 500px)").matches) {
+  if (window.matchMedia("(min-width: 600px)").matches) {
     console.log("Screen width is at least 500px");
     window.location.reload();
   } else {
