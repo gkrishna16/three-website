@@ -1,5 +1,5 @@
 import "./style.css";
-import Gopal from "/gopalpp.jpg";
+import Gopal from "/gopal.jpg";
 import Moon from "./moon.jpeg";
 import Space from "./space.jpg";
 import Normal from "./normal.jpeg";
