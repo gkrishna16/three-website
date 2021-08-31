@@ -116,18 +116,19 @@ blockquote p {
   grid-column: 6 / 12;
 }
 
-.projects-layout {
+/* .projects-layout {
   display: flex;
   padding: 1rem;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1em;
-}
+} */
 
 .projects-layout {
   display: grid;
   gap: 1.5em;
+  padding: 1em;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
@@ -144,6 +145,7 @@ blockquote p {
   cursor: pointer;
   transform: scale(1.2);
   transition: all 0.2s ease-in-out;
+  border: white 0.5px solid;
 }
 
 .purpose p {
