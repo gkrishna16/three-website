@@ -118,9 +118,17 @@ blockquote p {
 
 .projects-layout {
   display: flex;
+  padding: 1rem;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 1em;
+}
+
+.projects-layout {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 .projects-layout div {
