@@ -1,8 +1,8 @@
 import "./style.css";
-import Gopal from "/gopal.jpg";
-import Moon from "./moon.jpeg";
-import Space from "./space.jpg";
-import Normal from "./normal.jpeg";
+import Gopal from "./pictures/gopal.jpg";
+import Moon from "./pictures/moon.jpeg";
+import Space from "./pictures/space.jpg";
+import Normal from "./pictures/normal.jpeg";
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
