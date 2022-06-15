@@ -48,13 +48,6 @@ pointLight.position.set(5, 5, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-// Helpers
-// const lightHelper = new THREE.PointLightHelper(pointLight);
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper);
-
-// const controls = new OrbitControls(camera, renderer.domElement);
-
 // add stars
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
@@ -126,60 +119,34 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-// function onWindowResize() {
-//   camera.aspect = contenedor.clientWidth / contenedor.clientHeight;
-
-//   camera.updateProjectionMatrix();
-
-//   renderer.setSize(contenedor.clientWidth, contenedor.clientHeight);
-// }
-
-// onWindowResize();
-
 animate();
 
-// const scene = new THREE.Scene();
-// const camera = new THREE.PerspectiveCamera(
-//   75,
-//   window.innerWidth / window.innerHeight,
-//   0.1,
-//   1000
-// );
-// const renderer = new THREE.WebGLRenderer({
-//   canvas: document.querySelector("#bg"),
-// });
+// FORM CODES
 
-// renderer.setPixelRatio(window.devicePixelRatio);
-// renderer.setSize(window.innerWidth, window.innerHeight);
-// camera.position.setZ(30);
-// renderer.render(scene, camera);
+const form = document.getElementById("form-id");
 
-// const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-// const material = new THREE.MeshStandardMaterial({
-//   color: "red",
-// });
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-// const torus = new THREE.Mesh(geometry, material);
-// scene.add(torus);
+  const first_name = document.getElementById("first-name").value;
+  const last_name = document.getElementById("last-name").value;
+  const email = document.getElementById("email").value;
 
-// const pointLight = new THREE.PointLight(0xffffff);
-// pointLight.position.set(5, 5, 5);
+  fetch(`${process.env.BACK_API}/post`, {
+    method: "POST",
+    body: JSON.stringify({
+      first_name: first_name,
+      last_name: last_name,
+      email: email,
+    }),
 
-// const ambientLight = new THREE.AmbientLight(0xffffff);
-// scene.add(pointLight, ambientLight);
-
-// const lightHelper = new THREE.PointLightHelper(pointLight);
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper);
-
-// function animate() {
-//   requestAnimationFrame(animate);
-
-//   torus.rotation.x += 0.01;
-//   torus.rotation.y += 0.01;
-//   torus.rotation.z += 0.01;
-
-//   renderer.render(scene, camera);
-// }
-
-// animate();
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+  form.reset();
+});

@@ -156,7 +156,21 @@ blockquote p {
 .social {
   grid-column: 2/11;
 }
-/* media queries ................. */
+
+.form {
+  grid-column: 2/12;
+}
+
+.form h2 {
+  font-family: tomarik-display-shadow, sans-serif;
+}
+
+label,
+input {
+  display: block;
+}
+
+/*  media queries .................  */
 
 @media only screen and (max-width: 1020px) {
   h1 {
