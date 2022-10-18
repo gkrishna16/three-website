@@ -27,7 +27,6 @@ a {
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
-
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -43,7 +42,6 @@ main {
   /* max-width: 100%; */
   margin: 0px auto;
   padding: 120px 0px;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -85,7 +83,6 @@ header:hover {
   transition: all 0.2s ease-in-out;
   background-color: rgb(92, 160, 223);
   background-color: snow;
-
   color: black;
 }
 
@@ -144,13 +141,13 @@ blockquote p {
 
 .projects-layout div:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  scale: 1.2;
   transition: all 0.2s ease-in-out;
   border: white 0.5px solid;
 }
 
 .purpose p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: snow;
 }
 
